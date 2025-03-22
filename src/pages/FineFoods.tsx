@@ -116,9 +116,9 @@ function FineFoods() {
   };
 
   return (
-    <div>
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[60vh] bg-amber-700">
+      <section className="relative min-h-[40vh] sm:min-h-[50vh] flex items-center ">
         <div 
           className="absolute inset-0 bg-black/40"
           style={{
@@ -128,10 +128,10 @@ function FineFoods() {
             backgroundBlendMode: 'overlay'
           }}
         ></div>
-        <div className="container mx-auto px-6 relative">
+        <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 relative">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold text-white mb-6">Dhonthiyapper Fine Foods</h1>
-            <p className="text-xl text-gray-100 leading-relaxed">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 sm:mb-6">Dhonthiyapper Fine Foods</h1>
+            <p className="text-lg sm:text-xl text-gray-100 leading-relaxed">
               Experience the perfect blend of tradition and taste with our premium quality rusks. 
               Crafted with care and baked to perfection, our rusks are the ideal companion for your tea time.
             </p>
@@ -140,13 +140,13 @@ function FineFoods() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-amber-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <feature.icon className="h-12 w-12 text-amber-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <feature.icon className="h-10 w-10 sm:h-12 sm:w-12 text-amber-600 mb-4" />
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
@@ -155,9 +155,9 @@ function FineFoods() {
       </section>
 
       {/* Products Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-12">
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Our Premium Rusk Collection</h2>
             <button
               onClick={handleWhatsAppEnquiry}
@@ -168,7 +168,7 @@ function FineFoods() {
             </button>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {ruskProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
                 <div className="relative h-48">
@@ -184,9 +184,9 @@ function FineFoods() {
                   </div>
                 </div>
                 
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-xl font-bold text-gray-900">{product.name}</h3>
+                <div className="p-4 sm:p-6">
+                  <div className="flex justify-between items-start">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900">{product.name}</h3>
                   </div>
                 </div>
               </div>
@@ -196,12 +196,12 @@ function FineFoods() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-amber-700 relative overflow-hidden">
+      <section className="py-12 sm:py-16 bg-amber-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-6 relative">
+        <div className="container mx-auto px-4 sm:px-6 relative">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Become a Distributor</h2>
-            <p className="text-lg sm:text-xl mb-8">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">Become a Distributor</h2>
+            <p className="text-base sm:text-xl mb-6 sm:mb-8">
               Join our network of successful distributors and bring the taste of Dhonthiyapper to your region.
             </p>
             <button 

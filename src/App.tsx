@@ -34,37 +34,34 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         {/* Header */}
-        <header className="bg-black/95 backdrop-blur-sm shadow-md fixed w-full z-50">
+        <header className=" backdrop-blur-sm shadow-md fixed w-full z-50">
           <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
             <div className="flex items-center justify-between">
               <Link to="/" className="flex items-center">
                 <img
-                  src="/siraj-agency-logo.jpg"
-                  alt="Siraj Agency Logo"
-                  className="h-8 w-8 sm:h-10 sm:w-10 object-contain"
+                  src="/siraj-agency-logo2.jpg"
+                  alt="Siraj Logo"
+                  className="h-8 sm:h-10 object-contain"
                 />
-                <span className="ml-2 text-lg sm:text-xl font-bold text-white">
-                  Siraj Export & Import
-                </span>
               </Link>
 
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center space-x-8">
                 <Link
                   to="/"
-                  className="text-white hover:text-purple-600 transition-colors"
+                  className="text-black font-bold hover:text-purple-600 transition-colors"
                 >
                   Home
                 </Link>
                 <Link
                   to="/about"
-                  className="text-white hover:text-purple-600 transition-colors"
+                  className="text-black font-bold hover:text-purple-600 transition-colors"
                 >
                   About Us
                 </Link>
                 <Link
                   to="/contact"
-                  className="text-white hover:text-purple-600 transition-colors"
+                  className="text-black font-bold hover:text-purple-600 transition-colors"
                 >
                   Contact Us
                 </Link>
@@ -76,9 +73,9 @@ function App() {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Toggle menu"
               >
-                <div className="w-6 h-0.5 bg-white mb-1.5 transition-all duration-200 ease-out"></div>
-                <div className="w-6 h-0.5 bg-white mb-1.5 transition-all duration-200 ease-out"></div>
-                <div className="w-6 h-0.5 bg-white transition-all duration-200 ease-out"></div>
+                <div className="w-6 h-0.5 bg-black mb-1.5 transition-all duration-200 ease-out"></div>
+                <div className="w-6 h-0.5 bg-black mb-1.5 transition-all duration-200 ease-out"></div>
+                <div className="w-6 h-0.5 bg-black transition-all duration-200 ease-out"></div>
               </button>
             </div>
 

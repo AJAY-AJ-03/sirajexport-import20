@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Eye, Users, Award, Star, TrendingUp } from 'lucide-react';
+import { Target, Eye, Users, Star, TrendingUp } from 'lucide-react';
 
 interface TeamMember {
   id: number;
@@ -51,9 +51,14 @@ const values = [
   }
 ];
 
+// Calculate dynamic years of excellence
+const START_YEAR = 2017;
+const currentYear = new Date().getFullYear();
+const yearsOfExcellence = currentYear - START_YEAR;
+
 function AboutUs() {
   return (
-    <div >
+    <div>
       {/* Hero Section */}
       <section className="relative h-[60vh] bg-purple-700">
         <div className="absolute inset-0 bg-black/30"></div>
@@ -61,8 +66,7 @@ function AboutUs() {
           <div className="max-w-3xl mx-auto text-center text-white">
             <h1 className="text-5xl font-bold mb-6">Our Story</h1>
             <p className="text-xl leading-relaxed">
-              Since 1995, we've been connecting India's favorite brands with millions of consumers, 
-              building lasting partnerships and delivering excellence in distribution.
+              Since 2017, we've been connecting India's favorite brands with consumers, building strong partnerships and delivering excellence in distribution.
             </p>
           </div>
         </div>
@@ -114,35 +118,6 @@ function AboutUs() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">Our Leadership Team</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamMembers.map((member) => (
-              <div key={member.id} className="group">
-                <div className="relative overflow-hidden rounded-xl shadow-lg">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-96 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <p className="text-white text-lg leading-relaxed">{member.bio}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-6 text-center">
-                  <h3 className="text-2xl font-bold text-gray-800">{member.name}</h3>
-                  <p className="text-purple-600 font-semibold mt-2">{member.position}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Achievement Section */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
@@ -150,7 +125,7 @@ function AboutUs() {
             <h2 className="text-4xl font-bold mb-16">Our Achievements</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="p-6">
-                <h3 className="text-4xl font-bold text-purple-600 mb-2">25+</h3>
+                <h3 className="text-4xl font-bold text-purple-600 mb-2">{yearsOfExcellence}+</h3>
                 <p className="text-gray-600">Years of Excellence</p>
               </div>
               <div className="p-6">

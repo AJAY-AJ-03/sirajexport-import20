@@ -13,7 +13,7 @@ function Footer() {
             <p className="text-gray-400 mb-4">
               Your trusted partner in quality products and fine foods distribution.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
@@ -26,7 +26,7 @@ function Footer() {
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -84,7 +84,7 @@ function Footer() {
               </li>
               <li className="flex items-center text-gray-400">
                 <Mail className="h-5 w-5 mr-2 flex-shrink-0" />
-                info@sirajagency.com
+                info@sirajexport.com
               </li>
             </ul>
           </div>
